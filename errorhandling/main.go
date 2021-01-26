@@ -28,13 +28,13 @@ func getName(u *url.URL) (string, error) {
 	} else if segment == "foo" {
 		return "foo", nil
 	} else if segment == "bar" {
-		// contoh handlling error lewat custom
+		// contoh error handlinglewat custom
 		// cara 1 => return "", NewProblem(codeNotFound, http.StatusNotFound, fmt.Sprintf("%s not found!", segment))
 		// cara 2 => return "", ErrNotFound
 		// cara 3 => return "", NewErrNotFound(fmt.Sprintf("%s not found!", segment))
 		return "", NewErrNotFound(fmt.Sprintf("%s not found!", segment))
 	} else {
-		// contoh handlling error dari eksternal
+		// contoh error handling dari eksternal
 		i, err := strconv.ParseInt(segment, 10, 0)
 		if err != nil {
 			return "", err
