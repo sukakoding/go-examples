@@ -41,6 +41,7 @@ func Error(w http.ResponseWriter, err error) {
 		m = v.Message()
 	}
 
+	// TODO log, warning
 	r := &errorResponse{
 		Code:    c,
 		Message: m,

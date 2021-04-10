@@ -16,6 +16,7 @@ const (
 	codeInvalidCurriculum
 	codeUserHasActivated
 	codeRoleNotFound
+	codeSendEmailFail
 )
 
 var (

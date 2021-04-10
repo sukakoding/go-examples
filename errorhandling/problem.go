@@ -10,7 +10,8 @@ type (
 	Problem struct {
 		code    uint32
 		status  int
-		message string
+		message string // FE
+		trace   string // BE
 	}
 )
 
